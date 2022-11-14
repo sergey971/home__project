@@ -1,0 +1,16 @@
+@mixin text
+    text-align: center
+    font-weight: 300
+    font-size: 1.5rem
+    color: $text-color
+
+@mixin hover-main-desc
+    &__col:hover .main__desc > :nth-child(1),
+    &__col:hover .main__desc > :nth-child(2)
+        color: $color-background-desc
+    &__col:hover .main__desc > :last-child
+        color: $text-color-hover
+
+@mixin hover-main-image
+    background: $color-background
+    color: white

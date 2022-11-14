@@ -1,0 +1,41 @@
+.main
+    &__row
+        display: grid
+        grid-template-columns: repeat(3, 32rem)
+        grid-template-rows: repeat(3, 28.4rem)
+        grid-gap: 2rem
+    .image img
+        position: relative
+        z-index: -1
+    &__col:hover .image
+        @include hover-main-image
+    &__col
+        min-height: 32rem
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        row-gap: 1rem
+    &__desc
+        position: absolute
+        top: 16.8rem
+        left: 26.4rem
+        z-index: 1
+        color: $text-color
+    @include hover-main-desc
+    &__title
+        font-size: 2rem
+        font-weight: 500
+        margin-top: 2rem
+        text-align: center
+    &__text
+        margin-top: 1rem
+        @include text
+
+    &__btn
+        @include text
+        text-transform: uppercase
+        display: inline-block
+        margin-top: 2rem
+        padding: 1.3rem 4rem
+        background-color: $color-background-btn
