@@ -4,38 +4,71 @@
         grid-template-columns: repeat(3, 32rem)
         grid-template-rows: repeat(3, 28.4rem)
         grid-gap: 2rem
-    .image img
+    .work
+        margin: 0
+        margin-bottom: 22px
         position: relative
-        z-index: -1
-    &__col:hover .image
-        @include hover-main-image
-    &__col
-        min-height: 32rem
-        display: flex
-        align-items: center
-        justify-content: center
-        flex-direction: column
-        row-gap: 1rem
-    &__desc
+    .work figcaption
+        background-color: rgb(192, 48, 28, 0.7)
         position: absolute
-        top: 16.8rem
-        left: 26.4rem
-        z-index: 1
-        color: $text-color
-    @include hover-main-desc
-    &__title
-        font-size: 2rem
-        font-weight: 500
-        margin-top: 2rem
-        text-align: center
-    &__text
-        margin-top: 1rem
-        @include text
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
 
-    &__btn
-        @include text
+        text-align: center
+        color: white
+        cursor: pointer
+
+        visibility: hidden
+    .work:hover figcaption
+        visibility: visible
+.main__body
+    margin-bottom: 50px
+.col__row
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+.col__body p
+    margin-bottom: 20px
+.main__title
+    font-size: 2rem
+    font-weight: 500
+.main__text
+    font-size: 1.5rem
+    font-weight: 400
+.main__btn
+    font-size: 1.5rem
+    display: inline-block
+    color: white
+// ============
+.our
+    background: url('./../image/bg.jpg')
+    position: relative
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top center
+    margin-bottom: 10rem
+    min-height: 50vh
+    &__hover
+        background: linear-gradient(180deg,rgba(192, 48, 28, 0.7), rgba(192, 48, 28, 0.7))
+        position: absolute
+        top: 0
+        left: 0
+
+        width: 100%
+        height: 100%
+    &__desc
+        text-align: center
+        margin-top: 10rem
+        color: white
+        font-size: 2rem
+        line-height: 130%
+    &__desc span
         text-transform: uppercase
-        display: inline-block
-        margin-top: 2rem
-        padding: 1.3rem 4rem
-        background-color: $color-background-btn
+    &__text
+        margin-bottom: 4rem
+    &__link
+        border: 1px solid white
+        padding: 1rem 2rem
+        color: white
